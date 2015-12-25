@@ -12,6 +12,7 @@
     "JSONStream": "^1.0.7",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
-    "nano": "^6.1.5"
+    "nano": "^6.1.5",
+    "query-params": "0.0.1"
   }
 }
