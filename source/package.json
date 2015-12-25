@@ -3,6 +3,7 @@
   "scripts": {
     "build": "gulp compile",
     "develop": "gulp develop",
+    "postinstall": "npm run build",
     "test": "tape test"
   },
   "repository": {

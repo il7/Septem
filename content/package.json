@@ -2,7 +2,8 @@
   "name": "septem-content",
   "scripts": {
     "test": "tape test",
-    "update": "node update.js"
+    "update": "node update.js",
+    "postinstall": "npm run update"
   },
   "private": true,
   "devDependencies": {
@@ -14,6 +15,7 @@
     "metalsmith-headings-identifier": "0.0.4",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-paths": "^2.1.1",
     "metalsmith-publish": "^0.1.3",
     "metalsmith-title": "0.0.1",
     "tape": "^4.0.0"

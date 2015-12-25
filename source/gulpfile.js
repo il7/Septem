@@ -2,7 +2,6 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var del = require('del');
 var sequence = require('run-sequence');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');

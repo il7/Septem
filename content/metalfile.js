@@ -6,7 +6,6 @@ var headings = require('metalsmith-headings');
 var paths = require('metalsmith-paths');
 var headingsId = require('metalsmith-headings-identifier');
 var fileMetadata = require('metalsmith-filemetadata');
-var hierarchy = require('metalsmith-hierarchy');
 var extlinks = require('metalsmith-external-links');
 var excerpts = require('metalsmith-excerpts');
 var title = require('metalsmith-title');

@@ -6,12 +6,13 @@
     "node": "5.x"
   },
   "scripts": {
-    "install": "npm run install-server && npm run install-content",
+    "install": "npm run install-server && npm run install-content && npm run install-source",
     "install-server": "cd server && npm install",
     "install-content": "cd content && npm install",
+    "install-source": "cd source && npm install",
     "update-content": "cd content && npm run update",
     "start": "cd server && npm run start",
-    "build": "cd source && npm run compile",
+    "build": "cd source && npm run build",
     "develop": "cd source && npm run develop",
     "test": "tape test"
   },
