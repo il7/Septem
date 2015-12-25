@@ -7,7 +7,7 @@ const app = express();
 const queryData = require('./query-data.js');
 
 // serve static assets normally
-app.use(express.static(__dirname + '/../dist'));
+app.use('/assets', express.static(path.resolve(__dirname, '../assets')));
 
 app.get('/api', apiRequest)
 app.get('/api/:name', apiRequest)
@@ -39,7 +39,7 @@ function apiRequest(req, res) {
 // serve all files to index (front end app will take over)
 app.get('*', function (req, res) {
   res.type('html');
-  res.sendFile(path.resolve(__dirname, '../dist/index.html'))
+  res.sendFile(path.resolve(__dirname, '../assets/index.html'))
 });
 
 app.listen(port);

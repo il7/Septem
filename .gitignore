@@ -4,3 +4,7 @@ node_modules
 dist
 tmp
 npm-debug.log
+assets/bundle.js
+assets/bundle.js.map
+assets/style.css
+assets/style.css.map
