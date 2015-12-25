@@ -1,0 +1,4 @@
+.t-home { &, > a { color: $color-dark; } }
+.t-articles { &, > a { color: $color-red; } }
+.t-open-source { &, > a { color: $color-purple; } }
+.t-contribute { &, > a { color: $color-blue; } }

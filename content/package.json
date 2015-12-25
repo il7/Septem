@@ -1,0 +1,25 @@
+{
+  "name": "septem-content",
+  "scripts": {
+    "test": "tape test",
+    "update": "node update.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "metalsmith": "^1.7.0",
+    "metalsmith-excerpts": "^1.1.0",
+    "metalsmith-external-links": "^0.1.2",
+    "metalsmith-filemetadata": "0.0.4",
+    "metalsmith-headings": "^0.1.0",
+    "metalsmith-headings-identifier": "0.0.4",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-publish": "^0.1.3",
+    "metalsmith-title": "0.0.1",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "JSONStream": "^1.0.7",
+    "nano": "^6.1.5"
+  }
+}

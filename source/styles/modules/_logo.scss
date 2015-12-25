@@ -1,0 +1,15 @@
+.logo {  
+  display: block;
+  
+  width: 60vw;
+  height: 60vw;
+  max-width: 240px;
+  max-height: 240px;
+  
+  border-radius: 3px;
+  
+  @include background($color-dark, svg('logo-color-rounded'), cover);
+  
+  font-size: 0;
+  color: transparent;
+}

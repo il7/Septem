@@ -1,0 +1,38 @@
+.heading {
+  position: relative;
+  font-size: 150%;
+  font-weight: 500;
+  line-height: 1.3em;
+
+  &.m-bold { font-weight: 700; }
+  &.m-light { font-weight: 300; }
+  &.m-italic { font-style: italic; }
+  
+  &:hover {
+    .heading-anchor { opacity: 1; }
+  }
+}
+
+.heading-anchor {
+  position: absolute;
+  top: 0.35em;
+  left: -0.7em;
+  
+  width: 16px;
+  height: 0.6em;
+  
+  @include background(transparent, svg('link'), contain);
+  
+  opacity: 0;
+  transition-property: opacity;
+}
+
+h1.heading { font-size: 180%; font-weight: 700; }
+h2.heading { font-size: 150%; font-weight: 700; }
+h3.heading { font-size: 120%; }
+h4.heading,
+h5.heading { font-size: 100%; }
+
+@include respond-below(720px) {
+  .heading-anchor { left: -18px; }
+}

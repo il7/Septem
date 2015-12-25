@@ -1,0 +1,4 @@
+@mixin module($ns) {
+  @include meta(( namespace: #{$ns} ));
+  #{'.' + $ns} { @content; }
+}

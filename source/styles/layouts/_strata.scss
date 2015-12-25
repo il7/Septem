@@ -1,0 +1,15 @@
+.strata {
+  .wrapper {
+    max-width: $wrapper;
+    padding: $padding;
+    margin: auto;  
+  }
+}
+
+@include respond(0, 960px) {
+  .strata {
+    .wrapper {
+      padding: $space;
+    }
+  }
+}

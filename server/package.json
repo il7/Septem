@@ -1,0 +1,17 @@
+{
+  "name": "septem-server",
+  "scripts": {
+    "test": "tape test",
+    "start": "node index.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "JSONStream": "^1.0.7",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "nano": "^6.1.5"
+  }
+}

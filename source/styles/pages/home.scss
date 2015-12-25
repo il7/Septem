@@ -1,0 +1,16 @@
+.l-home {
+  .strata-heading a { text-decoration: none; }
+  padding-bottom: $padding;
+}
+
+.l-home-articles {
+  .strata-heading a { color: $color-red; }  
+}
+
+.l-home-open-source {
+  .strata-heading a { color: $color-purple; }  
+}
+
+.l-home-contribute {
+  .strata-heading a { color: $color-blue; }  
+}
