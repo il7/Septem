@@ -9,10 +9,12 @@
     "tape": "^4.0.0"
   },
   "dependencies": {
-    "JSONStream": "^1.0.7",
+    "babel-polyfill": "^6.3.14",
+    "babel-register": "^6.3.13",
     "express": "^4.13.3",
+    "history": "^1.13.1",
     "lodash": "^3.10.1",
-    "nano": "^6.1.5",
-    "query-params": "0.0.1"
+    "mustache": "^2.2.1",
+    "mustache-express": "^1.2.2"
   }
 }

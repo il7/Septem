@@ -1,0 +1,14 @@
+.strata {
+  .wrapper {
+    max-width: vars(--wrapper);
+    padding: vars(--padding);
+    margin: auto;  
+  }
+
+  ::respond(0, 960px) {
+    .wrapper {
+      padding: vars(--space);
+    }
+  }
+}
+

@@ -1,10 +1,21 @@
+require('babel-register')({
+  presets: ['es2015', 'react']
+});
+
+require('babel-polyfill');
+
 const _ = require('lodash');
-const params = require('query-params');
-const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 8080;
-const app = express();
+const express = require('express');
+const mustacheExpress = require('mustache-express');
 const queryData = require('./query-data.js');
+
+var app = express();
+
+app.engine('mustache', mustacheExpress());
+
+app.set('views engine', 'mustache');
+app.set('views', path.join(__dirname, 'views'));
 
 // serve static assets normally
 app.use('/assets', express.static(path.resolve(__dirname, '../assets')));
@@ -39,9 +50,10 @@ function apiRequest(req, res) {
 // serve all files to index (front end app will take over)
 app.get('*', function (req, res) {
   res.type('html');
-  res.sendFile(path.resolve(__dirname, '../assets/index.html'))
+  res.status(200);
+  res.render('index.mustache', {});
 });
 
-app.listen(port);
+app.listen(process.env.PORT || 8080);
 
-console.log("server started on port " + port);
+console.log("server started on port " + (process.env.PORT || 8080));

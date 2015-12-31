@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import Logo from '../../modules/logo/index';
 import Strata from '../../modules/strata/index';
 import Heading from '../../modules/heading/index';
-import Footer from '../../modules/footer/index';
+import Footer from '../../layouts/footer/index';
 
 export default class ErrorPage extends React.Component {
   render() {

@@ -2,12 +2,11 @@ import React from 'react';
 import params from 'query-params';
 import Heading from '../heading/index';
 import Loader from '../loader/index';
+import { List, ListContainer } from '../list/index';
 
 export default class ArchiveList extends React.Component {
   constructor(props) {
     super(props);
-
-    // console.log(props)
     
     var year = this.props.year;
     var range = year ? [parseInt(year, 10) + 1, year] : [];
@@ -38,35 +37,28 @@ export default class ArchiveList extends React.Component {
 
   render() {
     var self = this;
-    var results;
 
     if (this.state.results.length > 0) {
-      results = this.state.results.map(function(post) {
-        var excerpt;
-        var date;
-
-        if (post.excerpt) {
-          excerpt = <p className="textblock textblock-2-lines">
-            {post.excerpt.substr(0, 120)}
-          </p>;
-        }
-
-        if (self.props.dates !== 'false' && post.date) {
-          date = <p><small>{formatdate(post.date)}</small></p>
-        }
+      return <ListContainer className="rhythm">{ this.state.results.map(function(post) {
+        var date = (self.props.dates !== 'false' && post.date) ? <p>
+          <small>{formatdate(post.date)}</small>
+        </p> : undefined;
+        
+        var excerpt = post.excerpt ? <p className="textblock textblock-2-lines">
+          {post.excerpt.substr(0, 120)}
+        </p> : undefined;
 
         return <li key={post._id}>
           <Heading level="3" to={'/' + post.slug}>{post.title}</Heading>
           {date}
           {excerpt}
         </li>
-      }); 
+      }) }</ListContainer> 
     } else {
       var depth = self.props.dates == 'false' ? 1 : 2;
-      results = <li><Loader limit={self.props.limit || 3} depth={depth} /></li>;
+      var limit = self.props.limit || 3;
+      return <Loader limit={limit} depth={depth} />;
     }
-
-    return (<ul className="rhythm">{results}</ul>)
   }
 }
 
