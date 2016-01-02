@@ -2,7 +2,7 @@ import React from 'react';
 import params from 'query-params';
 import Heading from '../heading/index';
 import Loader from '../loader/index';
-import { List, ListContainer } from '../list/index';
+import { ListContainer, ListItem } from '../list/index';
 
 export default class ArchiveList extends React.Component {
   constructor(props) {
@@ -48,11 +48,11 @@ export default class ArchiveList extends React.Component {
           {post.excerpt.substr(0, 120)}
         </p> : undefined;
 
-        return <li key={post._id}>
+        return <ListItem key={post._id}>
           <Heading level="3" to={'/' + post.slug}>{post.title}</Heading>
           {date}
           {excerpt}
-        </li>
+        </ListItem>
       }) }</ListContainer> 
     } else {
       var depth = self.props.dates == 'false' ? 1 : 2;

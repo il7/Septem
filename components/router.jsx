@@ -6,10 +6,12 @@ import Home from './pages/home/index';
 import Error from './pages/error/index';
 import Page from './pages/page/index';
 
-export const Routes = <Route path="/" component={App}>
-  <IndexRoute component={Home} />
-  <Route path="error" component={Error}/>
-  <Route path=":name" component={Page} />
-</Route>
+import history from './history';
 
-export default <Router><Routes /></Router>
+export default <Router history={ history }>
+  <Route path="/" component={App}>
+    <IndexRoute component={Home} />
+    <Route path="error" component={Error}/>
+    <Route path=":name" component={Page} />
+  </Route>
+</Router>

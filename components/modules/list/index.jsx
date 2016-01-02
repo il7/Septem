@@ -10,7 +10,7 @@ export default class List extends React.Component {
 
 export class ListContainer extends React.Component {
   render() {
-    return <li>{this.props.children}</li>
+    return <ul>{this.props.children}</ul>
   }
 }
 
