@@ -1,0 +1,21 @@
+{{#>list className="rhythm"}}
+  {{#each state.results}}
+    {{#>list-item}}
+      {{#>heading level=3}}
+        {{#>link to=slug}}{{title}}{{/link}}
+      {{/heading}}
+
+      {{#if date}}
+        <p><small>{{date}}</small></p>
+      {{/if}}
+
+      {{#if excerpt}}
+        <p class="textblock textblock-2-lines">{{excerpt}}</p>
+      {{/if}}
+    {{/list-item}}
+  {{/each}}
+
+  {{#unless state.results}}
+    {{>loader}}
+  {{/unless}}
+{{/list}}

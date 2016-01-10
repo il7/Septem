@@ -1,0 +1,22 @@
+<div class="l-home">
+  {{#>strata layout="home-header"}}
+    <a href="/">{{>logo}}{{/link}}</a>
+    <p>What is IL7? sit amet adipiscing, <a href="/articles" class="t-articles">Articles</a> and <a href="/open-source" class="t-open-source">Open Source Projects</a> or elit, <a href="/contribute" class="t-contribute">Contribute</a> tempor incididunt ut labore.</p>
+    <p>What is your position? Amet lacus hendrerit tempus non eget quam. Maecenas in maximus justo. Morbi rhoncus malesuada nisi, eu scelerisque lorem placerat id.</p>
+  {{/strata}}
+
+  {{#>strata layout="home-articles"}}
+    {{#>heading level=2}}<a href="/articles">Articles</a>{{/heading}}
+    {{>archive-list limit=3 items="articles"}}
+  {{/strata}}
+
+  {{#>strata layout="home-open-source"}}
+    {{#>heading level=2}}<a href="/open-source">Open Source Projects</a>{{/heading}}
+    {{>archive-list limit=3 items="open-source"}}
+  {{/strata}}
+
+  {{#>strata layout="home-contribute"}}
+    {{#>heading level=2}}<a href="/contribute">Contribute</a>{{/heading}}
+    <p>How can others contribute? Amet adipiscing, Articles and Open Source Projects or elit.</p>
+  {{/strata}}
+</div>
